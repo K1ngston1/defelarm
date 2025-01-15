@@ -14,6 +14,12 @@ class _ManualState extends State<Manual> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Довідник"),
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.arrow_back),
+          ),
         ),
       ),
     );

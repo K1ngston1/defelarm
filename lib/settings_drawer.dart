@@ -14,6 +14,12 @@ class _SettingsState extends State<Settings> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Налаштування"),
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.arrow_back),
+          ),
         ),
       ),
     );
