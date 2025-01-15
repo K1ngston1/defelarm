@@ -1,13 +1,15 @@
+import 'package:defalarm_projects/manual_drawer.dart';
+import 'package:defalarm_projects/settings_drawer.dart';
 import 'package:flutter/material.dart';
 
-class PopUp extends StatefulWidget {
-  const PopUp({super.key});
+class MenuDrawer extends StatefulWidget {
+  const MenuDrawer({super.key});
 
   @override
-  State<PopUp> createState() => _PopUpState();
+  State<MenuDrawer> createState() => _MenuDrawerState();
 }
 
-class _PopUpState extends State<PopUp> {
+class _MenuDrawerState extends State<MenuDrawer> {
   Widget buildListTile({
     required IconData icon,
     required String title,
@@ -52,36 +54,46 @@ class _PopUpState extends State<PopUp> {
           ),
           buildListTile(
             icon: Icons.alarm,
-            title: 'Alarms',
+            title: 'Будільники',
             onTap: () {
               Navigator.pop(context); // Обробка іншого пункту
             },
           ),
           buildListTile(
             icon: Icons.settings,
-            title: 'Settings',
+            title: 'Налаштування',
             onTap: () {
-              Navigator.pop(context); // Обробка іншого пункту
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const Settings(),
+                ),
+              );
             },
           ),
           buildListTile(
             icon: Icons.book,
-            title: 'Manual',
+            title: 'Довідник',
             onTap: () {
-              Navigator.pop(context); // Обробка іншого пункту
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const Manual(),
+                ),
+              ); // Обробка іншого пункту
             },
           ),
           const Divider(),
           buildListTile(
             icon: Icons.favorite,
-            title: 'Thanks fo effort',
+            title: 'Дякую за підтримку',
             onTap: () {
               Navigator.pop(context); // Обробка іншого пункту
             },
           ),
           buildListTile(
             icon: Icons.bug_report,
-            title: 'Report bug',
+            title: 'Повідомте про баг',
             onTap: () {
               Navigator.pop(context); // Обробка іншого пункту
             },

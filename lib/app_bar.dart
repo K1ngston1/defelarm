@@ -16,7 +16,7 @@ class _AppBarDesignState extends State<AppBarDesign> {
     return AppBar(
       backgroundColor: const Color(0xFF1B2022), // HEX-код кольору
       title: const Text(
-        "Будільник",
+        "Новий Будільник",
         style: TextStyle(
           color: Colors.white,
         ),

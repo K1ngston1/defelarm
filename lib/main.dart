@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'app_bar.dart';
 import 'body_main.dart';
-import 'pop_up.dart';
+import 'navigation_drawer.dart';
 
 void main() => runApp(MainWindow());
 
@@ -19,7 +19,7 @@ class _MainWindowState extends State<MainWindow> {
       home: Scaffold(
         body: BodyMain(),
         appBar: AppBarDesign(),
-        drawer: const PopUp(),
+        drawer: MenuDrawer(),
       ),
     ); // Ваш AppBar
   }
